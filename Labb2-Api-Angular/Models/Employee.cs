@@ -11,7 +11,7 @@ namespace Labb2_Api_Angular.Models
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Email { get; set; }
-        public int PhoneNumber { get; set; }
+        public string PhoneNumber { get; set; }
         public string Gender { get; set; }
         public string Adress { get; set; }
         [Column(TypeName = "decimal(10,2)")]

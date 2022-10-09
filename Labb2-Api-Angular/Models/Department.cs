@@ -3,7 +3,7 @@
     public class Department
     {
         public Guid DepartmentId { get; set; }
-        public int EmployeeID { get; set; }
+        public Guid EmployeeID { get; set; }
         public string DepartmentName { get; set; }
     }
 }
