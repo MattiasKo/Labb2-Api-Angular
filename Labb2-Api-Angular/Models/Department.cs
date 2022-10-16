@@ -3,7 +3,6 @@
     public class Department
     {
         public Guid DepartmentId { get; set; }
-        public Guid EmployeeID { get; set; }
         public string DepartmentName { get; set; }
     }
 }

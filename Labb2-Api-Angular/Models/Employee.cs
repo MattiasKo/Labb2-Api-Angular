@@ -16,5 +16,7 @@ namespace Labb2_Api_Angular.Models
         public string Adress { get; set; }
         [Column(TypeName = "decimal(10,2)")]
         public decimal Salary { get; set; }
+        public Guid DepartmentId { get; set; }
+        public Department? department { get; set; }
     }
 }

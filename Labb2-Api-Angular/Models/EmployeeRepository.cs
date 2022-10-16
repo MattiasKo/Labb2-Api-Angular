@@ -23,12 +23,12 @@ namespace Labb2_Api_Angular.Models
 
         public async Task<IEnumerable<Employee>> GetAll()
         {
-            return await _context.Employees.ToListAsync();
+            return await _context.Employees.Include(e=>e.department).ToListAsync();
         }
 
         public async Task<Employee> GetById(Guid id)
         {
-            var emp = await _context.Employees.FirstOrDefaultAsync(c => c.EmployeeId == id);
+            var emp = await _context.Employees.Include(e=>e.department).FirstOrDefaultAsync(c => c.EmployeeId == id);
             return emp;
 
         }
@@ -52,6 +52,7 @@ namespace Labb2_Api_Angular.Models
                 emp.Gender = employee.Gender;
                 emp.Adress = employee.Adress;
                 emp.Salary = employee.Salary;
+                emp.DepartmentId = employee.DepartmentId;
                 await _context.SaveChangesAsync();
 
             }

@@ -45,7 +45,8 @@ namespace Labb2_Api_Angular.Models
             var dep = await _context.Departments.FirstOrDefaultAsync(c => c.DepartmentId == id);
             if(dep != null)
             {
-                dep.EmployeeID = department.EmployeeID;
+     
+                dep.DepartmentId = id;
                 dep.DepartmentName = department.DepartmentName;
                
                 await _context.SaveChangesAsync();
